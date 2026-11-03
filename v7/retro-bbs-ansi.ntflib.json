@@ -1,0 +1,197 @@
+{
+  "format": "ntf-structure-library",
+  "version": 1,
+  "id": "retro-bbs-ansi",
+  "name": "Retro Textmode · BBS / ANSI",
+  "description": "DOS/BBS-inspired textmode components using classic ANSI 16-colour combinations, monospace layouts, box drawing, prompts, file listings and message boards.",
+  "theme": "ansi",
+  "structures": [
+    {
+      "id": "bbs-header",
+      "name": "BBS ANSI title header",
+      "category": "Headers",
+      "description": "80-column-inspired title panel with ANSI cyan, blue and bright white.",
+      "tags": [
+        "bbs",
+        "ansi",
+        "header",
+        "title"
+      ],
+      "html": "<div style=\"padding:12px;background-color:#00007f;color:#ffffff;border:2px solid #55ffff;font-family:monospace;text-align:center\"><div style=\"color:#55ffff;font-size:11px\">╔══════════════════════════════════════════════════════════════╗</div><div style=\"font-size:22px;font-weight:700;color:#ffffff\">NIGHT SHIFT BBS</div><div style=\"color:#ffff55\">THE UNDERGROUND INFORMATION EXCHANGE</div><div style=\"color:#55ffff;font-size:11px\">╚══════════════════════════════════════════════════════════════╝</div><small style=\"color:#cccccc\">NODE 01 · 14.4K MODEM · EST. 1994</small></div>"
+    },
+    {
+      "id": "ansi-menu-horizontal",
+      "name": "ANSI horizontal menu",
+      "category": "Navigation",
+      "description": "Classic numbered BBS navigation strip with high-contrast keys.",
+      "tags": [
+        "ansi",
+        "menu",
+        "navigation"
+      ],
+      "html": "<table style=\"width:100%;border-collapse:collapse;font-family:monospace;text-align:center\"><tr><td style=\"padding:8px 4px;background-color:#0000aa;color:#ffffff;border:1px solid #55ffff\"><strong style=\"color:#ffff55\">[1]</strong><br>MESSAGES</td><td style=\"padding:8px 4px;background-color:#0000aa;color:#ffffff;border:1px solid #55ffff\"><strong style=\"color:#ffff55\">[2]</strong><br>FILES</td><td style=\"padding:8px 4px;background-color:#0000aa;color:#ffffff;border:1px solid #55ffff\"><strong style=\"color:#ffff55\">[3]</strong><br>GAMES</td><td style=\"padding:8px 4px;background-color:#0000aa;color:#ffffff;border:1px solid #55ffff\"><strong style=\"color:#ffff55\">[Q]</strong><br>QUIT</td></tr></table>"
+    },
+    {
+      "id": "ansi-side-menu",
+      "name": "ANSI vertical side menu",
+      "category": "Navigation",
+      "description": "Menu blocks using DOS/ANSI palette and ASCII separators.",
+      "tags": [
+        "ansi",
+        "menu",
+        "sidebar"
+      ],
+      "html": "<div style=\"padding:8px;background-color:#000055;color:#ffffff;border:1px solid #55ffff;font-family:monospace\"><div style=\"padding:5px;background-color:#00aaaa;color:#000000;font-weight:700\"> MAIN MENU </div><div style=\"padding:5px;color:#ffff55\">&gt; 01  Message areas</div><div style=\"padding:5px\">  02  File library</div><div style=\"padding:5px\">  03  Door games</div><div style=\"padding:5px\">  04  User list</div><div style=\"padding:5px\">  05  Sysop desk</div><div style=\"padding:5px;color:#55ffff\">────────────────────</div><div style=\"padding:5px;color:#aaaaaa\">Press a number to select</div></div>"
+    },
+    {
+      "id": "ansi-status-bar",
+      "name": "ANSI status bar",
+      "category": "Status",
+      "description": "Classic terminal footer with user, node, time and credits.",
+      "tags": [
+        "ansi",
+        "status",
+        "footer"
+      ],
+      "html": "<table style=\"width:100%;border-collapse:collapse;font-family:monospace\"><tr><td style=\"padding:6px;background-color:#00aaaa;color:#000000;font-weight:700\">USER: GUEST</td><td style=\"padding:6px;background-color:#0000aa;color:#ffffff\">NODE 01</td><td style=\"padding:6px;background-color:#0000aa;color:#ffff55\">TIME 00:14</td><td style=\"padding:6px;background-color:#0000aa;color:#55ffff\">CREDITS 120</td></tr></table>"
+    },
+    {
+      "id": "ansi-box-panel",
+      "name": "ANSI double-line box",
+      "category": "Panels",
+      "description": "Reusable framed panel with blue background and DOS bright accents.",
+      "tags": [
+        "ansi",
+        "box",
+        "panel",
+        "decoration"
+      ],
+      "html": "<div style=\"padding:10px;background-color:#000055;color:#ffffff;border:2px solid #55ffff;font-family:monospace\"><div style=\"color:#ffff55\">╔══════════════ SYSTEM NOTICE ══════════════╗</div><div style=\"padding:8px;color:#ffffff\">Welcome back, operator.<br><span style=\"color:#55ffff\">New messages:</span> <strong style=\"color:#ffff55\">07</strong><br><span style=\"color:#55ff55\">System status:</span> ALL SYSTEMS NOMINAL</div><div style=\"color:#ffff55\">╚═══════════════════════════════════════════╝</div></div>"
+    },
+    {
+      "id": "ansi-divider",
+      "name": "ANSI section divider",
+      "category": "Decoration",
+      "description": "Colourful ASCII/ANSI dividers for long text-mode screens.",
+      "tags": [
+        "ansi",
+        "divider",
+        "decoration"
+      ],
+      "html": "<div style=\"padding:4px 0;background-color:#000055;color:#55ffff;text-align:center;font-family:monospace;letter-spacing:1px\">╞═══════════════════ ◆ ═══════════════════╡</div><div style=\"padding:3px 0;background-color:#000055;color:#ffff55;text-align:center;font-family:monospace\">* * * * * * * * * * * * * * * * * * * * *</div>"
+    },
+    {
+      "id": "ansi-file-list",
+      "name": "ANSI file directory listing",
+      "category": "Lists",
+      "description": "Classic file listing with filename, size, date and colour key.",
+      "tags": [
+        "ansi",
+        "files",
+        "directory",
+        "listing"
+      ],
+      "html": "<table style=\"width:100%;border-collapse:collapse;background-color:#000055;color:#ffffff;font-family:monospace;font-size:11px\"><tr style=\"background-color:#00aaaa;color:#000000\"><th style=\"padding:5px;text-align:left\">FILENAME</th><th style=\"padding:5px\">SIZE</th><th style=\"padding:5px\">DATE</th><th style=\"padding:5px\">DL</th></tr><tr><td style=\"padding:4px;color:#55ffff\">ANSI_PACK.ZIP</td><td style=\"padding:4px;text-align:right\">148K</td><td style=\"padding:4px\">11-02-94</td><td style=\"padding:4px;color:#55ff55\">042</td></tr><tr><td style=\"padding:4px;color:#ffff55\">MUSIC.MOD</td><td style=\"padding:4px;text-align:right\">312K</td><td style=\"padding:4px\">10-28-94</td><td style=\"padding:4px;color:#55ff55\">019</td></tr><tr><td style=\"padding:4px;color:#55ffff\">SYSOP.TXT</td><td style=\"padding:4px;text-align:right\">004K</td><td style=\"padding:4px\">10-12-94</td><td style=\"padding:4px;color:#55ff55\">008</td></tr></table>"
+    },
+    {
+      "id": "ansi-message-post",
+      "name": "BBS message post",
+      "category": "Messages",
+      "description": "Message header and body in old-school textmode styling.",
+      "tags": [
+        "bbs",
+        "message",
+        "post",
+        "ansi"
+      ],
+      "html": "<div style=\"border:1px solid #55ffff;background-color:#000055;color:#ffffff;font-family:monospace\"><div style=\"padding:6px;background-color:#00aaaa;color:#000000;font-weight:700\">MESSAGE #00421 · GENERAL CHAT</div><div style=\"padding:8px\"><div><span style=\"color:#ffff55\">FROM:</span> NIGHTOWL</div><div><span style=\"color:#ffff55\">TO:</span> ALL USERS</div><div><span style=\"color:#ffff55\">SUBJECT:</span> The modem is alive</div><div style=\"color:#5555ff\">────────────────────────────────────────</div><p style=\"color:#ffffff\">Greetings from the other side of midnight.<br>The boards are open. Drop a line and stay awhile.</p><div style=\"color:#55ffff\">- NIGHTOWL</div></div></div>"
+    },
+    {
+      "id": "ansi-prompt",
+      "name": "Command prompt",
+      "category": "Controls",
+      "description": "Text-mode prompt with editable command line.",
+      "tags": [
+        "ansi",
+        "prompt",
+        "input",
+        "console"
+      ],
+      "html": "<div style=\"padding:9px;background-color:#000000;color:#55ff55;font-family:monospace;border:1px solid #00aa00\"><div style=\"color:#55ffff\">C:\\BBS\\MAIN&gt; READY</div><div style=\"display:flex;align-items:center;gap:5px;margin-top:6px\"><strong style=\"color:#ffff55\">&gt;</strong><input type=\"text\" value=\"HELP\" style=\"min-width:0;flex:1;background-color:#000000;color:#55ff55;border:0;border-bottom:1px solid #00aa00;font-family:monospace\"><button type=\"button\" style=\"background-color:#005500;color:#aaffaa;border:1px solid #55ff55;padding:5px 9px;font-family:monospace\">ENTER</button></div></div>"
+    },
+    {
+      "id": "ansi-progress",
+      "name": "File transfer progress",
+      "category": "Progress",
+      "description": "Retro file-transfer progress meter with block characters.",
+      "tags": [
+        "ansi",
+        "transfer",
+        "progress"
+      ],
+      "html": "<div style=\"padding:10px;background-color:#000055;border:1px solid #55ffff;color:#ffffff;font-family:monospace\"><div style=\"display:flex;justify-content:space-between;color:#ffff55\"><strong>DOWNLOADING: DEMO.ZIP</strong><strong>68%</strong></div><div style=\"margin:8px 0;padding:3px;background-color:#000000;border:1px solid #5555ff;color:#55ff55;letter-spacing:1px\">██████████████████████████░░░░░░░░░░░░</div><div style=\"display:flex;justify-content:space-between;color:#55ffff;font-size:11px\"><span>38.4 KB / 56.5 KB</span><span>2400 CPS</span></div></div>"
+    },
+    {
+      "id": "ansi-palette",
+      "name": "ANSI 16-colour palette",
+      "category": "Decoration",
+      "description": "Swatches labelled with the classic 16 terminal colours.",
+      "tags": [
+        "ansi",
+        "palette",
+        "colors",
+        "decoration"
+      ],
+      "html": "<table style=\"width:100%;border-collapse:collapse;font-family:monospace;text-align:center;font-size:10px\"><tr><td style=\"padding:8px;background-color:#000000;color:#ffffff\">BLACK</td><td style=\"padding:8px;background-color:#aa0000;color:#ffffff\">RED</td><td style=\"padding:8px;background-color:#00aa00;color:#000000\">GREEN</td><td style=\"padding:8px;background-color:#aa5500;color:#ffffff\">BROWN</td></tr><tr><td style=\"padding:8px;background-color:#0000aa;color:#ffffff\">BLUE</td><td style=\"padding:8px;background-color:#aa00aa;color:#ffffff\">MAGENTA</td><td style=\"padding:8px;background-color:#00aaaa;color:#000000\">CYAN</td><td style=\"padding:8px;background-color:#aaaaaa;color:#000000\">GREY</td></tr><tr><td style=\"padding:8px;background-color:#555555;color:#ffffff\">D.GRAY</td><td style=\"padding:8px;background-color:#ff5555;color:#000000\">L.RED</td><td style=\"padding:8px;background-color:#55ff55;color:#000000\">L.GREEN</td><td style=\"padding:8px;background-color:#ffff55;color:#000000\">YELLOW</td></tr><tr><td style=\"padding:8px;background-color:#5555ff;color:#ffffff\">L.BLUE</td><td style=\"padding:8px;background-color:#ff55ff;color:#000000\">L.MAG</td><td style=\"padding:8px;background-color:#55ffff;color:#000000\">L.CYAN</td><td style=\"padding:8px;background-color:#ffffff;color:#000000\">WHITE</td></tr></table>"
+    },
+    {
+      "id": "ansi-user-card",
+      "name": "BBS user card",
+      "category": "User",
+      "description": "Profile card with alias, access level and activity.",
+      "tags": [
+        "bbs",
+        "user",
+        "profile"
+      ],
+      "html": "<div style=\"display:flex;gap:10px;padding:9px;background-color:#000055;border:1px solid #55ffff;color:#ffffff;font-family:monospace\"><div style=\"width:56px;min-width:56px;height:62px;background-color:#0000aa;border:1px solid #55ffff;text-align:center;padding-top:15px;color:#ffff55;font-size:22px\">☺</div><div><strong style=\"color:#55ffff\">NIGHTOWL</strong><div style=\"color:#ffff55\">LEVEL 12 SYSOP</div><small>Member since 1991</small><div style=\"color:#55ff55\">Last call: 00:14 ago</div></div></div>"
+    },
+    {
+      "id": "ansi-door-menu",
+      "name": "Door games launcher",
+      "category": "Navigation",
+      "description": "Classic BBS door game selection block.",
+      "tags": [
+        "bbs",
+        "doors",
+        "menu",
+        "games"
+      ],
+      "html": "<div style=\"padding:9px;background-color:#000055;color:#ffffff;border:1px solid #5555ff;font-family:monospace\"><div style=\"padding:5px;background-color:#aa0000;color:#ffffff;text-align:center;font-weight:700\">★ DOOR GAMES ★</div><div style=\"padding:6px;color:#ffff55\">[01] TradeWars 2002</div><div style=\"padding:6px;color:#55ffff\">[02] LORD — Legend of the Red Dragon</div><div style=\"padding:6px;color:#ffffff\">[03] Galactic Empire</div><div style=\"padding:6px;color:#55ff55\">[04] Chess / Checkers</div><div style=\"padding:6px;border-top:1px dashed #5555ff;color:#aaaaaa\">Select game number or [Q] to return</div></div>"
+    },
+    {
+      "id": "ansi-alert",
+      "name": "ANSI alert / warning",
+      "category": "Alerts",
+      "description": "High-contrast red warning panel for textmode interfaces.",
+      "tags": [
+        "ansi",
+        "alert",
+        "warning"
+      ],
+      "html": "<div style=\"padding:10px;background-color:#aa0000;color:#ffffff;border:2px solid #ffff55;font-family:monospace;text-align:center\"><strong style=\"font-size:15px;color:#ffff55\">*** WARNING ***</strong><div style=\"margin-top:6px\">ACCESS DENIED — SYSOP ONLY</div><small style=\"color:#ffcccc\">Event logged · Node 01</small></div>"
+    },
+    {
+      "id": "ansi-footer",
+      "name": "BBS footer / prompt",
+      "category": "Footer",
+      "description": "Disconnect hint and board slogan in ANSI colours.",
+      "tags": [
+        "bbs",
+        "footer",
+        "ansi"
+      ],
+      "html": "<div style=\"padding:8px;background-color:#00007f;color:#aaaaaa;text-align:center;font-family:monospace;border-top:2px solid #55ffff\"><span style=\"color:#55ffff\">NIGHT SHIFT BBS</span> · <span style=\"color:#ffff55\">KEEP THE FREQUENCY</span><br><small>[H]elp　[?] Commands　[Q]uit　[ESC] Return to menu</small></div>"
+    }
+  ]
+}

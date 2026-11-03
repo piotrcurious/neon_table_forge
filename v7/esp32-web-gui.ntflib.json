@@ -1,0 +1,209 @@
+{
+  "format": "ntf-structure-library",
+  "version": 1,
+  "id": "esp32-web-gui",
+  "name": "ESP32 Web GUI Building Blocks",
+  "description": "Reusable control-panel components for ESP32 web servers: connectivity, sensors, GPIO, relays, OTA, logs and device actions. Edit snippets for your own endpoints, pins and firmware fields.",
+  "theme": "esp32",
+  "structures": [
+    {
+      "id": "device-header",
+      "name": "Device header",
+      "category": "Shell",
+      "description": "Device identity, firmware version and live connection state.",
+      "tags": [
+        "header",
+        "device",
+        "status"
+      ],
+      "html": "<div style=\"padding:12px;border:1px solid #31566c;border-radius:10px;background-color:#0c2030;color:#e6f6ff\"><div style=\"display:flex;justify-content:space-between;align-items:center;gap:10px\"><div><small style=\"color:#79bdd0;letter-spacing:1px\">ESP32 CONTROL NODE</small><div style=\"font-size:20px;font-weight:700\">Workshop controller</div><small style=\"color:#9db9c9\">Firmware 1.4.2 · STA mode</small></div><div style=\"padding:6px 10px;border-radius:20px;background-color:#123d32;color:#8bffd1\"><strong>● ONLINE</strong></div></div><div style=\"margin-top:10px;padding-top:8px;border-top:1px solid #28465a;color:#9db9c9;font-size:11px\">192.168.4.1　|　Uptime 04:32:18　|　RSSI −54 dBm</div></div>"
+    },
+    {
+      "id": "connection-strip",
+      "name": "Connection status strip",
+      "category": "Connectivity",
+      "description": "Compact Wi-Fi, MQTT and cloud connectivity indicators.",
+      "tags": [
+        "wifi",
+        "mqtt",
+        "status",
+        "network"
+      ],
+      "html": "<table style=\"width:100%;border-collapse:separate;border-spacing:4px\"><tr><td style=\"padding:8px;background-color:#123b34;border:1px solid #286452;border-radius:6px;color:#9dffd9\"><strong>● Wi-Fi</strong><br><small>Connected · −54 dBm</small></td><td style=\"padding:8px;background-color:#123b34;border:1px solid #286452;border-radius:6px;color:#9dffd9\"><strong>● MQTT</strong><br><small>Broker online</small></td><td style=\"padding:8px;background-color:#3a2c19;border:1px solid #795b2f;border-radius:6px;color:#ffdc9a\"><strong>● Cloud</strong><br><small>Sync delayed</small></td></tr></table>"
+    },
+    {
+      "id": "sensor-tiles",
+      "name": "Sensor telemetry tiles",
+      "category": "Telemetry",
+      "description": "Four compact readouts with units, context and last update.",
+      "tags": [
+        "sensor",
+        "telemetry",
+        "dashboard"
+      ],
+      "html": "<table style=\"width:100%;border-collapse:separate;border-spacing:5px;table-layout:fixed\"><tr><td style=\"padding:10px;background-color:#102b40;border:1px solid #2e5b73;border-radius:8px\"><small style=\"color:#83b7cb\">TEMPERATURE</small><div style=\"font-size:25px;font-weight:700;color:#e5fbff\">23.8 <small>°C</small></div><small style=\"color:#7de0b5\">+0.3° / 10 min</small></td><td style=\"padding:10px;background-color:#102b40;border:1px solid #2e5b73;border-radius:8px\"><small style=\"color:#83b7cb\">HUMIDITY</small><div style=\"font-size:25px;font-weight:700;color:#e5fbff\">46 <small>%</small></div><small style=\"color:#7de0b5\">Stable</small></td></tr><tr><td style=\"padding:10px;background-color:#102b40;border:1px solid #2e5b73;border-radius:8px\"><small style=\"color:#83b7cb\">PRESSURE</small><div style=\"font-size:25px;font-weight:700;color:#e5fbff\">1013 <small>hPa</small></div><small style=\"color:#a9c9e3\">Sea level</small></td><td style=\"padding:10px;background-color:#102b40;border:1px solid #2e5b73;border-radius:8px\"><small style=\"color:#83b7cb\">CO₂</small><div style=\"font-size:25px;font-weight:700;color:#e5fbff\">612 <small>ppm</small></div><small style=\"color:#7de0b5\">Good</small></td></tr></table>"
+    },
+    {
+      "id": "sensor-row",
+      "name": "Single sensor readout",
+      "category": "Telemetry",
+      "description": "Label/value/unit row suitable for dense sensor lists.",
+      "tags": [
+        "sensor",
+        "readout",
+        "row"
+      ],
+      "html": "<div style=\"display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 11px;border-bottom:1px solid #29495c;background-color:#10283a;color:#e8f7ff\"><div><strong>DS18B20 · Boiler outlet</strong><br><small style=\"color:#89b4c8\">GPIO 4 · 12-bit · updated 2 s ago</small></div><div style=\"text-align:right\"><strong style=\"font-size:20px\">68.4 °C</strong><br><small style=\"color:#80e5b5\">NORMAL</small></div></div>"
+    },
+    {
+      "id": "gauge-linear",
+      "name": "Linear gauge / progress",
+      "category": "Telemetry",
+      "description": "A labelled percentage gauge with threshold markers and value.",
+      "tags": [
+        "gauge",
+        "progress",
+        "telemetry"
+      ],
+      "html": "<div style=\"padding:11px;border:1px solid #31556b;border-radius:8px;background-color:#10283a;color:#e8f7ff\"><div style=\"display:flex;justify-content:space-between\"><strong>Tank level</strong><strong>72%</strong></div><div style=\"height:12px;margin:8px 0 5px;background-color:#071522;border:1px solid #31556b;border-radius:8px;overflow:hidden\"><div style=\"height:100%;width:72%;background-image:linear-gradient(90deg,#1aa6a1,#73e6a6);border-radius:8px\"></div></div><div style=\"display:flex;justify-content:space-between;color:#89afc4;font-size:10px\"><span>0%</span><span>LOW 20%</span><span>HIGH 90%</span><span>100%</span></div></div>"
+    },
+    {
+      "id": "relay-card",
+      "name": "Relay / output control",
+      "category": "Controls",
+      "description": "A relay state card with safe-looking ON/OFF action links.",
+      "tags": [
+        "relay",
+        "gpio",
+        "control",
+        "button"
+      ],
+      "html": "<div style=\"padding:12px;border:1px solid #365971;border-radius:9px;background-color:#10283a;color:#e8f7ff\"><div style=\"display:flex;justify-content:space-between;align-items:center\"><div><strong>Relay 01 · Pump</strong><br><small style=\"color:#89b4c8\">GPIO 26 · Active high</small></div><span style=\"padding:4px 9px;background-color:#123e32;border-radius:12px;color:#93ffd0;font-weight:700\">ON</span></div><form method=\"post\" action=\"/api/relay/1\" style=\"display:flex;gap:7px;margin-top:11px\"><button type=\"submit\" name=\"state\" value=\"on\" style=\"flex:1;padding:8px;background-color:#165b49;color:#d9fff2;border:1px solid #338875;border-radius:6px;font-weight:700\">ON</button><button type=\"submit\" name=\"state\" value=\"off\" style=\"flex:1;padding:8px;background-color:#49303a;color:#ffe5ed;border:1px solid #855153;border-radius:6px;font-weight:700\">OFF</button><button type=\"submit\" name=\"state\" value=\"toggle\" style=\"flex:1;padding:8px;background-color:#24445c;color:#d9f3ff;border:1px solid #416b82;border-radius:6px\">TOGGLE</button></form></div>"
+    },
+    {
+      "id": "gpio-pin-grid",
+      "name": "GPIO pin matrix",
+      "category": "Hardware",
+      "description": "Editable pinout-style grid with pin labels and states.",
+      "tags": [
+        "gpio",
+        "pinout",
+        "hardware",
+        "table"
+      ],
+      "html": "<table style=\"width:100%;border-collapse:collapse;text-align:center;font-size:11px\"><tr><th style=\"padding:6px;background-color:#24445b;color:#dff8ff\">PIN</th><th style=\"padding:6px;background-color:#24445b;color:#dff8ff\">GPIO</th><th style=\"padding:6px;background-color:#24445b;color:#dff8ff\">MODE</th><th style=\"padding:6px;background-color:#24445b;color:#dff8ff\">STATE</th><th style=\"padding:6px;background-color:#24445b;color:#dff8ff\">PIN</th></tr><tr><td style=\"padding:6px;background-color:#10283a\">1</td><td style=\"padding:6px;background-color:#10283a\">3</td><td style=\"padding:6px;background-color:#10283a\">UART RX</td><td style=\"padding:6px;background-color:#123b32;color:#9effd2\">ACTIVE</td><td style=\"padding:6px;background-color:#10283a\">2</td></tr><tr><td style=\"padding:6px;background-color:#10283a\">2</td><td style=\"padding:6px;background-color:#10283a\">4</td><td style=\"padding:6px;background-color:#10283a\">1-Wire</td><td style=\"padding:6px;background-color:#123b32;color:#9effd2\">ACTIVE</td><td style=\"padding:6px;background-color:#10283a\">3</td></tr><tr><td style=\"padding:6px;background-color:#10283a\">3</td><td style=\"padding:6px;background-color:#10283a\">16</td><td style=\"padding:6px;background-color:#10283a\">GPIO</td><td style=\"padding:6px;background-color:#3d321d;color:#ffe09a\">INPUT</td><td style=\"padding:6px;background-color:#10283a\">4</td></tr><tr><td style=\"padding:6px;background-color:#10283a\">4</td><td style=\"padding:6px;background-color:#10283a\">17</td><td style=\"padding:6px;background-color:#10283a\">PWM</td><td style=\"padding:6px;background-color:#123b50;color:#a9e5ff\">PWM 40%</td><td style=\"padding:6px;background-color:#10283a\">5</td></tr></table>"
+    },
+    {
+      "id": "wifi-config",
+      "name": "Wi-Fi configuration form",
+      "category": "Connectivity",
+      "description": "SSID/password form fields with connection metadata.",
+      "tags": [
+        "wifi",
+        "form",
+        "network",
+        "configuration"
+      ],
+      "html": "<form method=\"post\" action=\"/api/network/wifi\" style=\"padding:12px;border:1px solid #31566c;border-radius:8px;background-color:#10283a;color:#e8f7ff\"><fieldset style=\"padding:8px;border:1px solid #31566c;border-radius:7px\"><legend style=\"padding:0 6px;color:#8ed5e8\">Wi-Fi configuration</legend><label style=\"display:block;margin:6px 0\">SSID<br><input type=\"text\" name=\"ssid\" value=\"Workshop-IoT\" placeholder=\"Network name\" required style=\"width:100%;padding:8px;background-color:#071827;color:#e8f7ff;border:1px solid #41657b;border-radius:5px\"></label><label style=\"display:block;margin:6px 0\">Password<br><input type=\"password\" name=\"password\" value=\"\" placeholder=\"Network password\" style=\"width:100%;padding:8px;background-color:#071827;color:#e8f7ff;border:1px solid #41657b;border-radius:5px\"></label><button type=\"submit\" style=\"padding:8px 12px;background-color:#146354;color:#e6fff8;border:1px solid #338875;border-radius:5px\">Save & connect</button></fieldset></form>"
+    },
+    {
+      "id": "pwm-control",
+      "name": "PWM / actuator control",
+      "category": "Controls",
+      "description": "Slider and preset buttons for PWM or motor speed.",
+      "tags": [
+        "pwm",
+        "slider",
+        "actuator",
+        "control"
+      ],
+      "html": "<div style=\"padding:12px;background-color:#10283a;border:1px solid #31556b;border-radius:8px;color:#e8f7ff\"><div style=\"display:flex;justify-content:space-between\"><strong>Fan speed · GPIO 18</strong><strong>42%</strong></div><input type=\"range\" min=\"0\" max=\"100\" value=\"42\" style=\"width:100%;accent-color:#50d9d0;margin:10px 0\"><div style=\"display:flex;gap:6px\"><button type=\"button\" style=\"flex:1;padding:6px;background-color:#193e53;color:#dff8ff;border:1px solid #426b82;border-radius:5px\">25%</button><button type=\"button\" style=\"flex:1;padding:6px;background-color:#193e53;color:#dff8ff;border:1px solid #426b82;border-radius:5px\">50%</button><button type=\"button\" style=\"flex:1;padding:6px;background-color:#193e53;color:#dff8ff;border:1px solid #426b82;border-radius:5px\">75%</button><button type=\"button\" style=\"flex:1;padding:6px;background-color:#193e53;color:#dff8ff;border:1px solid #426b82;border-radius:5px\">100%</button></div></div>"
+    },
+    {
+      "id": "serial-monitor",
+      "name": "Serial monitor / log",
+      "category": "Diagnostics",
+      "description": "Monospace log window with timestamped events and severity colours.",
+      "tags": [
+        "serial",
+        "log",
+        "debug",
+        "diagnostics"
+      ],
+      "html": "<div style=\"padding:10px;background-color:#06131e;border:1px solid #31556b;border-radius:7px;color:#b8d6e3;font-family:monospace;font-size:11px\"><div style=\"color:#78e6b4\">[08:42:01.102] WIFI  connected, RSSI=-54</div><div style=\"color:#86cfff\">[08:42:01.114] MQTT  session established</div><div style=\"color:#d6dfe6\">[08:42:02.501] ADC   GPIO34 raw=1842</div><div style=\"color:#ffca80\">[08:42:04.220] WARN  sensor drift +1.8%</div><div style=\"color:#78e6b4\">[08:42:05.040] CTRL  relay_1=ON</div><div style=\"margin-top:7px;color:#7ea6b7\">● Live log stream</div></div>"
+    },
+    {
+      "id": "alarm-banner",
+      "name": "Alarm / notification banner",
+      "category": "Alerts",
+      "description": "Severity variants for warnings and critical conditions.",
+      "tags": [
+        "alert",
+        "alarm",
+        "notification"
+      ],
+      "html": "<div style=\"padding:10px 12px;border-left:4px solid #e9a84f;background-color:#3b2d1d;color:#ffe4b5;border-radius:5px\"><strong>⚠ WARNING · HIGH TEMPERATURE</strong><div style=\"margin-top:4px;font-size:12px\">Heat sink reached 78.2 °C. Fan output increased to 80%.</div><small style=\"color:#d9b77e\">2026-11-03 08:41:52 · Acknowledge required</small></div>"
+    },
+    {
+      "id": "network-summary",
+      "name": "Network diagnostics card",
+      "category": "Connectivity",
+      "description": "IP, gateway, subnet, DNS, RSSI and MAC information.",
+      "tags": [
+        "network",
+        "wifi",
+        "diagnostics"
+      ],
+      "html": "<table style=\"width:100%;border-collapse:collapse;background-color:#10283a;color:#e2f3ff;font-size:12px\"><tr><th colspan=\"2\" style=\"text-align:left;padding:8px;background-color:#1a3c54\">NETWORK · STA INTERFACE</th></tr><tr><td style=\"padding:6px;border-bottom:1px solid #294b60;color:#8fb4c8\">IPv4 address</td><td style=\"padding:6px;border-bottom:1px solid #294b60\">192.168.1.84</td></tr><tr><td style=\"padding:6px;border-bottom:1px solid #294b60;color:#8fb4c8\">Gateway</td><td style=\"padding:6px;border-bottom:1px solid #294b60\">192.168.1.1</td></tr><tr><td style=\"padding:6px;border-bottom:1px solid #294b60;color:#8fb4c8\">DNS</td><td style=\"padding:6px;border-bottom:1px solid #294b60\">1.1.1.1</td></tr><tr><td style=\"padding:6px;border-bottom:1px solid #294b60;color:#8fb4c8\">MAC</td><td style=\"padding:6px;border-bottom:1px solid #294b60\">A4:CF:12:00:AB:CD</td></tr></table>"
+    },
+    {
+      "id": "firmware-progress",
+      "name": "Firmware update progress",
+      "category": "Maintenance",
+      "description": "OTA progress panel with stage labels and progress bar.",
+      "tags": [
+        "ota",
+        "firmware",
+        "progress",
+        "update"
+      ],
+      "html": "<div style=\"padding:12px;border:1px solid #31556b;border-radius:8px;background-color:#10283a;color:#e7f6ff\"><div style=\"display:flex;justify-content:space-between\"><strong>Firmware update</strong><strong>64%</strong></div><div style=\"height:10px;margin:9px 0;background-color:#071522;border-radius:8px;overflow:hidden\"><div style=\"height:100%;width:64%;background-image:linear-gradient(90deg,#187d9e,#5be0b2)\"></div></div><div style=\"font-size:11px;color:#9bb9c9\">Writing application partition · 2.1 / 3.3 MB</div><div style=\"display:flex;justify-content:space-between;margin-top:9px;font-size:10px;color:#7eacbf\"><span>UPLOAD ✓</span><span>VERIFY ✓</span><strong style=\"color:#8ce8c0\">FLASHING…</strong><span>REBOOT</span></div></div>"
+    },
+    {
+      "id": "system-actions",
+      "name": "System action bar",
+      "category": "Controls",
+      "description": "Common restart, safe mode and configuration actions.",
+      "tags": [
+        "system",
+        "toolbar",
+        "actions"
+      ],
+      "html": "<div style=\"display:flex;flex-wrap:wrap;gap:7px;padding:9px;background-color:#10283a;border:1px solid #31556b;border-radius:8px\"><form method=\"post\" action=\"/api/system/restart\"><button type=\"submit\" style=\"padding:8px 11px;background-color:#4a3031;color:#ffe8e8;border:1px solid #855153;border-radius:5px\">↻ Restart</button></form><form method=\"post\" action=\"/api/system/safe-mode\"><button type=\"submit\" style=\"padding:8px 11px;background-color:#3a3523;color:#ffedb9;border:1px solid #756239;border-radius:5px\">Safe mode</button></form><a href=\"/config\" style=\"padding:8px 11px;background-color:#1c4358;color:#e5f8ff;text-decoration:none;border:1px solid #416b82;border-radius:5px\">Configuration</a><a href=\"/api/system/info\" style=\"padding:8px 11px;background-color:#20384a;color:#d7edfa;text-decoration:none;border:1px solid #416078;border-radius:5px\">System info</a></div>"
+    },
+    {
+      "id": "compact-footer",
+      "name": "Device footer / diagnostics",
+      "category": "Shell",
+      "description": "Small footer with firmware, chip and resource telemetry.",
+      "tags": [
+        "footer",
+        "device",
+        "memory"
+      ],
+      "html": "<div style=\"padding:7px 10px;background-color:#0b1b29;border-top:1px solid #315268;color:#83aabd;font-size:10px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap\"><span>ESP32-WROOM-32 · rev 1</span><span>Heap 148 kB free</span><span>Flash 4 MB</span><span>FW 1.4.2</span></div>"
+    },
+    {
+      "id": "command-console",
+      "name": "Command console input",
+      "category": "Controls",
+      "description": "Compact command input with a send button and command hint.",
+      "tags": [
+        "console",
+        "command",
+        "input"
+      ],
+      "html": "<form method=\"post\" action=\"/api/console\" style=\"padding:10px;background-color:#071823;border:1px solid #31556b;border-radius:8px;color:#cce7f2;font-family:monospace\"><div style=\"font-size:11px;color:#81b3c7;margin-bottom:6px\">DEVICE CLI · commands: help, status, gpio, reboot</div><div style=\"display:flex;gap:6px\"><input type=\"text\" name=\"command\" value=\"status\" placeholder=\"Enter command\" style=\"min-width:0;flex:1;padding:8px;background-color:#102b3b;color:#e4faff;border:1px solid #41677d;border-radius:4px;font-family:monospace\"><button type=\"submit\" style=\"padding:8px 12px;background-color:#155b55;border:1px solid #38877b;color:#eafff9;border-radius:4px\">SEND ↵</button></div></form>"
+    }
+  ]
+}
